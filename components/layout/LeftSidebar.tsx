@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Chat, Profile, WorkspaceMode, Project, ChatWithProjectData } from '../../types';
 import { Cog6ToothIcon, PencilIcon, PlusIcon, MagnifyingGlassIcon, ArrowLeftOnRectangleIcon, TrashIcon, ChevronDoubleLeftIcon, UserPlusIcon, Square2StackIcon } from '@heroicons/react/24/outline';
@@ -56,7 +55,7 @@ const UserFooter: React.FC<UserFooterProps> = ({ profile, onSettingsClick, onSig
                 <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-3 text-center border border-white/10">
                     <p className="text-xs text-gray-400 mb-2">You are in Guest Mode</p>
                     <button 
-                        onClick={() => window.location.reload()} 
+                        onClick={onSignOut} 
                         className="w-full py-2 bg-white text-black text-sm font-bold rounded-md hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
                     >
                         <UserPlusIcon className="w-4 h-4" />
